@@ -1,0 +1,55 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+  color: black;
+}
+
+div {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 2rem;
+
+}
+
+
+h1, h2 {
+  text-align:center; 
+  font-weight:900;
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+
+.spacer {
+  height: 100vh;
+}
+
+
+#hi {
+  position: fixed;
+  margin-left: 2rem;
+  margin-top: 0;
+}
+
+#test {
+  visibility: hidden;
+  position: fixed;
+  margin-left: 2rem;
+  margin-top: 0;
+}
+
+.sticky-container {
+  position: relative;
+}
+
+span {
+  color: red;
+}
+
