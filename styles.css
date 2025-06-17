@@ -5,6 +5,11 @@
 body {
   background-color: whitesmoke;
   color: black;
+  margin: 0;
+}
+
+.body-wrapper {
+  margin: 8px;
 }
 
 .section {
@@ -75,4 +80,6 @@ h2 {
 
 #footer {
   background-color: lightgray;
+  padding: 8px;
 }
+
