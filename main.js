@@ -1,13 +1,27 @@
+sdsu = document.querySelector('#sdsu')
+
+sdsu.addEventListener('mouseenter', () => {
+  sdsu.innerHTML = "San Diego State University"
+});
+
+bands = document.querySelector('#bands')
+
+bands.addEventListener('mouseenter', () => {
+  bands.innerHTML = "<i>The Chardoors</i>, <i>The Half Wits</i>, <i>Lime Devil</i>, and <i>The Hot Socks</i>"
+});
+
+song = document.querySelector('#song')
+
+song.addEventListener('mouseenter', () => {
+  song.innerHTML = "<i>Demented</i> and <i>Kazoo</i>"
+});
+
+
 age = document.querySelector('#age')
 
 age.addEventListener('mouseenter', () => {
   age.setAttribute("info", "full");
 });
-
-// age.addEventListener('mouseleave', () => {
-//   age.setAttribute("info", "short");
-// });
-
 
 function updateAge() {
 
@@ -32,25 +46,54 @@ function updateAge() {
 
 setInterval(updateAge, 100);
 
+const hi = document.querySelector('#hi');
 
+const headers = document.querySelectorAll("h2");
 
 const test = document.querySelector('#test');
-space_size = test.getBoundingClientRect().width;
-test.textContent = "TT"
-space_size -= test.getBoundingClientRect().width; 
+  
+for (const header of headers) {
+
+  hi.textContent = header.getAttribute("intro_text")
+  header.setAttribute("intro_right", hi.getBoundingClientRect().right)
+
+  if (header.getAttribute("space_size") != null) 
+    continue
+
+  test.textContent = header.textContent + " " + header.getAttribute("intro_text")
+  space_size = test.getBoundingClientRect().width;
+
+  console.log( space_size = test.getBoundingClientRect().width)
+  
+
+  test.textContent = header.textContent + header.getAttribute("intro_text")
+  space_size -= test.getBoundingClientRect().width; 
+  console.log( test.getBoundingClientRect().width)
+
+  header.setAttribute("space_size", space_size)
+
+  console.log(header)
+
+}
+test.remove()
+
+hi.textContent = "Hi, I'm"
 
 
-const hi = document.querySelector('#hi');
+
+
+
+
+
+
+
 
 default_hi_right = hi.getBoundingClientRect().right
 
 console.log(default_hi_right)
 
-const headers = document.querySelectorAll("h2");
-
-window.addEventListener('scroll', () => {
+function change_hi () {
   
-
   const hirect = hi.getBoundingClientRect();
 
   var closest_header = 0
@@ -76,9 +119,12 @@ window.addEventListener('scroll', () => {
 
   start_text = closest_header.querySelector(".starth")
 
-  
-  hi.style.left = String(start_text.getBoundingClientRect().left - default_hi_right - space_size) + "px"
+  hi.style.left = String(start_text.getBoundingClientRect().left - closest_header.getAttribute("intro_right") - space_size) + "px"
 
   console.log(space_size)
-});
+}
+
+change_hi()
+
+window.addEventListener('scroll', change_hi);
 
