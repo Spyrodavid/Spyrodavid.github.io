@@ -85,13 +85,17 @@ h1 {
   width: 150px; 
   height:auto;
   right: 3rem;
+  top: 6rem;
   border-radius: 1rem / 1rem;
 
 }
 
 
 .expandable {
-  color: red;
+  background-color: #FFDE64;
+  padding-left: 4px;
+  padding-right: 4px;
+
 }
 
 .thumbnail {
@@ -104,13 +108,14 @@ h1 {
 .thumbnail:hover {
   transition: box-shadow 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  
 }
 
 .grid-container {
   display: grid;
   gap: var(--line-height);
   grid-auto-flow: column;
-  height: calc(6 * var(--line-height));
+  height: calc(6 * var(--line-height)); 
 }
 
 
