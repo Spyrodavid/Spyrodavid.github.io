@@ -1,43 +1,69 @@
 * {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
 }
 
 body {
-  background-color: whitesmoke;
-  color: black;
+
+  --line-height: 2rem;
+
+  --background: #f7f7f7;
+
+  background-color: var(--background);
+
+  background-image:
+  radial-gradient(circle at 40px 40px, white 10px, transparent 10px),
+  url("https://ww.transparenttextures.com/patterns/beige-paper.png"),
+  linear-gradient(90deg, transparent 79px, #d4acab 79px, #d4acab 81px, transparent 81px),
+  linear-gradient(#eee .1rem, transparent .1rem);
+ 
+  
+  background-size:
+  auto,
+  auto,
+  auto,
+  100% var(--line-height);
+
+
+
+  font-family: 'Courier New', monospace;
+  font-size: var(--line-height);
+  line-height: var(--line-height);
+  box-sizing: border-box;
+
   margin: 0;
-}
-
-.body-wrapper {
-  margin: 8px;
-  padding-bottom: 20vh;
-}
-
-.section {
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 2rem;
+  padding: 0;
 
 }
 
+a {
+  
+}
 
 h1, h2 {
-  text-align:center; 
-  font-weight:900;
-  font-size: 4rem;
-}
+  font-size: calc(2 * var(--line-height));
+  text-align: center;
+  margin: var(--line-height);
+  transform: translateY(calc(var(--line-height) * -.23));
 
-h2 {
-  font-size: 4rem;
 }
 
 
-#hi {
-  position: fixed;
-  margin-left: 2rem;
-  margin-top: 0;
+.section {
+  margin-left: 90px;
+  margin-right: 20%;
+  font-size: var(--line-height);
+  line-height: var(--line-height);
+  transform: translateY(calc(var(--line-height) * .1));
 }
+
 
 #headshot {
   position:absolute;
@@ -47,14 +73,6 @@ h2 {
   border-radius: 1rem / 1rem;
 
 }
-
-#test {
-  visibility: hidden;
-  position: fixed;
-  margin-left: 2rem;
-  margin-top: 0;
-}
-
 
 
 .expandable {
@@ -75,8 +93,9 @@ h2 {
 
 .grid-container {
   display: grid;
-  gap: 1rem;
+  gap: var(--line-height);
   grid-auto-flow: column;
+  height: calc(6 * var(--line-height));
 }
 
 
@@ -84,4 +103,3 @@ h2 {
   background-color: lightgray;
   padding: 8px;
 }
-
