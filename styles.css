@@ -10,8 +10,9 @@ html, body {
     padding: 0; /* Remove default body padding */
 }
 
-body {
-
+#body_piece {
+  border-radius: 30px;
+  
   --line-height: 2rem;
 
   --background: #f7f7f7;
@@ -19,14 +20,23 @@ body {
   background-color: var(--background);
 
   background-image:
-  radial-gradient(circle at 40px 40px, white 10px, transparent 10px),
+  radial-gradient(circle at 40px 180px, white 12px, transparent 12px),
+  radial-gradient(circle at 41px 181px, gray 12px, transparent 12px),
   url("https://ww.transparenttextures.com/patterns/beige-paper.png"),
   linear-gradient(90deg, transparent 79px, #d4acab 79px, #d4acab 81px, transparent 81px),
   linear-gradient(#eee .1rem, transparent .1rem);
+
+  background-repeat: 
+  repeat-y,
+  repeat-y,
+  auto,
+  auto,
+  auto;
  
   
   background-size:
-  auto,
+  100% 50vh,
+  100% 50vh,
   auto,
   auto,
   100% var(--line-height);
@@ -43,15 +53,16 @@ body {
 
 }
 
-a {
-  
-}
+
 
 h1, h2 {
   font-size: calc(2 * var(--line-height));
   text-align: center;
   margin: var(--line-height);
   transform: translateY(calc(var(--line-height) * -.23));
+
+  padding: var(--line-height);
+  margin: 0;
 
 }
 
@@ -103,3 +114,4 @@ h1, h2 {
   background-color: lightgray;
   padding: 8px;
 }
+
