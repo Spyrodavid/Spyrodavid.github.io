@@ -10,7 +10,10 @@ html, body {
     padding: 0; /* Remove default body padding */
 }
 
+
 #body_piece {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+
   border-radius: 30px;
   
   --line-height: 2rem;
@@ -19,26 +22,25 @@ html, body {
 
   background-color: var(--background);
 
-  background-image:
+ background-image:
   radial-gradient(circle at 40px 180px, white 12px, transparent 12px),
   radial-gradient(circle at 41px 181px, gray 12px, transparent 12px),
-  url("https://ww.transparenttextures.com/patterns/beige-paper.png"),
   linear-gradient(90deg, transparent 79px, #d4acab 79px, #d4acab 81px, transparent 81px),
+    linear-gradient(to bottom, var(--background), var(--background)), /* background for first row */
   linear-gradient(#eee .1rem, transparent .1rem);
 
-  background-repeat: 
+background-repeat: 
   repeat-y,
   repeat-y,
-  auto,
-  auto,
-  auto;
- 
-  
-  background-size:
+  repeat,
+    no-repeat,  
+  repeat;
+
+background-size: 
   100% 50vh,
   100% 50vh,
   auto,
-  auto,
+  100% calc(var(--line-height) * 3), 
   100% var(--line-height);
 
 
