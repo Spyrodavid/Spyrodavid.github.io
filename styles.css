@@ -62,8 +62,12 @@ h1, h2 {
   transform: translateY(calc(var(--line-height) * -.23));
 
   padding: var(--line-height);
-  margin: 0;
+  margin: var(--line-height);;
 
+}
+
+h1 {
+  margin-top: 0;
 }
 
 

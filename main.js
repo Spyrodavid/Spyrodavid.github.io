@@ -45,3 +45,14 @@ function updateAge() {
 }
 
 setInterval(updateAge, 100);
+
+images = document.querySelectorAll(".thumbnail") 
+
+seed = 0
+for (image of images)  {
+
+  seed = seed * 13 + 13
+  seed %= 20
+  image.style.transform = `rotate(${seed - 10}deg)`
+  console.log(image.style.transform)
+}
