@@ -4,22 +4,26 @@
 
 
 html, body {
-  
 
-    --line-height: 2rem;
+
+
+    --line-height: 32pt;
+
+    font-size: var(--line-height);
+    line-height: var(--line-height);
 
     height: 100%;
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   html, body {
     background-color: lightblue;
     --line-height: 3rem;
   }
-}
+} */
 
 
 #body_piece {
@@ -44,7 +48,7 @@ background-repeat:
   repeat-y,
   repeat-y,
   repeat,
-    no-repeat,  
+  no-repeat,  
   repeat;
 
 background-size: 
@@ -96,6 +100,7 @@ h1 {
 .section {
   margin-left: 90px;
   margin-right: 20%;
+  margin-bottom: var(--line-height);
   font-size: var(--line-height);
   line-height: var(--line-height);
   transform: translateY(calc(var(--line-height) * .1));
@@ -106,16 +111,16 @@ h1 {
   position:absolute;
   width: 150px; 
   height: auto;
-  right: 3rem;
-  top: 6rem;
+  right: 1.5rem;
+  top: 3rem;
   border-radius: 1rem / 1rem;
 
 }
 
 #contact {
   position:absolute;
-  right: 3rem;
-  top: 2rem;
+  right: 1.5rem;
+  top: 1rem;
 
   transform: rotate(10deg);
 
