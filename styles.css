@@ -1,6 +1,5 @@
 * {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-decoration: none;
 }
 
 
@@ -50,8 +49,8 @@ background-size:
 
 
   font-family: 'Courier New', monospace;
-  font-size: var(--line-height);
-  line-height: var(--line-height);
+  font-size: var(--line-height) ;
+  line-height: var(--line-height) ;
   box-sizing: border-box;
 
   margin: 0;
@@ -129,10 +128,9 @@ h1 {
 .thumbnail {
   border-radius: 3rem / 3rem;
   object-fit: fill;
-  
+  width: 100%;
+  height: 100%;
   flex-grow: 0;
-  
-  scale: ;
 
 }
 
@@ -143,6 +141,9 @@ a:has(img) {
 .thumbnail:hover {
   transition: box-shadow 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+  transform: scale(1.1) !important;
+  transition: transform 0.3s ease;
   
 }
 
@@ -153,7 +154,6 @@ a:has(img) {
   flex-wrap: wrap;
   width: 80vw;
 }
-
 
 #footer {
   background-color: lightgray;
