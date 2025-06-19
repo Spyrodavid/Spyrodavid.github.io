@@ -14,9 +14,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   html, body {
-    font-size: 64px !important; /* Adjust the base font size for smaller screens */
+    background-color: lightblue;
+    --line-height: 3rem;
   }
 }
 
