@@ -4,6 +4,7 @@
 
 
 html, body {
+  
 
     --line-height: 2rem;
 
@@ -11,6 +12,12 @@ html, body {
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
     scroll-behavior: smooth;
+}
+
+@media (max-width: 800px) {
+  html, body {
+    font-size: 64px !important; /* Adjust the base font size for smaller screens */
+  }
 }
 
 
