@@ -5,9 +5,13 @@
 
 
 html, body {
+
+    --line-height: 2rem;
+
     height: 100%;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
+    scroll-behavior: smooth;
 }
 
 
@@ -16,7 +20,7 @@ html, body {
 
   border-radius: 30px;
   
-  --line-height: 2rem;
+  
 
   --background: #f7f7f7;
 
@@ -26,7 +30,7 @@ html, body {
   radial-gradient(circle at 40px 180px, white 12px, transparent 12px),
   radial-gradient(circle at 41px 181px, gray 12px, transparent 12px),
   linear-gradient(90deg, transparent 79px, #d4acab 79px, #d4acab 81px, transparent 81px),
-    linear-gradient(to bottom, var(--background), var(--background)), /* background for first row */
+  linear-gradient(to bottom, var(--background), var(--background)), /* background for first row */
   linear-gradient(#eee .1rem, transparent .1rem);
 
 background-repeat: 
@@ -58,18 +62,27 @@ background-size:
 
 
 h1, h2 {
-  font-size: calc(2 * var(--line-height));
+
   text-align: center;
-  margin: var(--line-height);
-  transform: translateY(calc(var(--line-height) * -.23));
+  
+}
 
-  padding: var(--line-height);
-  margin: var(--line-height);;
+h2 {
+  font-size: calc(2 * var(--line-height));
+  line-height: calc(2 * var(--line-height));
 
+  margin-bottom: var(--line-height); 
+  margin-top: var(--line-height);
 }
 
 h1 {
-  margin-top: 0;
+    font-size: calc(2.5 * var(--line-height));
+    line-height: calc(3 * var(--line-height));
+
+    margin-bottom: var(--line-height); 
+    margin-top: 0;
+    
+    
 }
 
 
@@ -85,10 +98,21 @@ h1 {
 #headshot {
   position:absolute;
   width: 150px; 
-  height:auto;
+  height: auto;
   right: 3rem;
   top: 6rem;
   border-radius: 1rem / 1rem;
+
+}
+
+#contact {
+  position:absolute;
+  right: 3rem;
+  top: 2rem;
+
+  transform: rotate(10deg);
+
+  font-size: var(--line-height);
 
 }
 
@@ -98,13 +122,22 @@ h1 {
   padding-left: 4px;
   padding-right: 4px;
 
+  z-index: 0;
+
 }
 
 .thumbnail {
   border-radius: 3rem / 3rem;
   object-fit: fill;
-  width: 100%;
-  height: 100%;
+  
+  flex-grow: 0;
+  
+  scale: ;
+
+}
+
+a:has(img) {
+  height: calc(var(--line-height) * 5);
 }
 
 .thumbnail:hover {
@@ -114,10 +147,11 @@ h1 {
 }
 
 .grid-container {
-  display: grid;
+  margin: var(--line-height);
+  display: flex;
   gap: var(--line-height);
-  grid-auto-flow: column;
-  height: calc(6 * var(--line-height)); 
+  flex-wrap: wrap;
+  width: 80vw;
 }
 
 

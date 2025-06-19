@@ -25,7 +25,14 @@ age.addEventListener('mouseenter', () => {
 
 function updateAge() {
 
+  
+
   const age = document.querySelector('#age');
+
+  if (age.getAttribute("info") != "full") {
+    return
+  }
+
 
   const pastDate = new Date(2003, 5, 10, 8, 0, 0); 
   const currentDate = new Date(); 
@@ -37,10 +44,7 @@ function updateAge() {
   d = h / 24
   y = d / 365
 
-  if (age.getAttribute("info") == "full")
-    age.textContent = (y.toFixed(8))
-  else
-    age.textContent = (y.toFixed(0))
+  age.textContent = (y.toFixed(8))
 
 }
 
@@ -49,24 +53,12 @@ setInterval(updateAge, 100);
 images = document.querySelectorAll(".thumbnail, #headshot") 
 
 seed = 0
+
 for (image of images)  {
 
   seed = seed * 13 + 13
   seed %= 20
   image.style.transform = `rotate(${seed - 10}deg)`
-  console.log(image.style.transform)
 }
 
-
-// grids = document.querySelectorAll(".grid-container") 
-
-// for (grid of grids)  {
-//   em1 = parseFloat(getComputedStyle(document.body).fontSize)
-
-//   height = grid.offsetHeight
-//   console.log(em1)
-
-//   grid.style.height = em1 * Math.round((height + em1) / em1)
-
-// }
 
