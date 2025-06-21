@@ -171,6 +171,9 @@ a:has(img) {
   height: calc(var(--line-height) * 5);
 }
 
+.grid-container > span {
+  background-color: red;
+}
 
 .grid-container {
   margin: var(--line-height);
@@ -203,4 +206,15 @@ a:has(img) {
 
 #postit > span {
   font-size: calc(.75 * var(--line-height));
+}
+
+.vertical-bundle {
+  display: flex;
+  flex-direction: column;
+
+  width: 25vw;
+}
+
+.arrow {
+  width: 100%;
 }
