@@ -5,6 +5,8 @@
 
 html, body {
 
+  color: red;
+
     --line-height: 32px;
 
     font-size: var(--line-height);
@@ -19,20 +21,11 @@ html, body {
 
 }
 
-/* @media only screen and (max-width: 600px) {
-  html, body {
-    background-color: lightblue;
-    --line-height: 3rem;
-  }
-} */
-
 
 #body_piece {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 
   border-radius: 30px;
-  
-  
 
   --background: #f7f7f7;
 
