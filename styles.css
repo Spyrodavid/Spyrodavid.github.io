@@ -5,8 +5,6 @@
 
 html, body {
 
-  color: red;
-
     --line-height: 32px;
 
     font-size: var(--line-height);
