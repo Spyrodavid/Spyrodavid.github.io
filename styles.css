@@ -5,9 +5,7 @@
 
 html, body {
 
-
-
-    --line-height: 32pt;
+    --line-height: 32px;
 
     font-size: var(--line-height);
     line-height: var(--line-height);
@@ -16,6 +14,9 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+
+    text-size-adjust: none;
+
 }
 
 /* @media only screen and (max-width: 600px) {
