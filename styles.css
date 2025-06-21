@@ -5,6 +5,8 @@
 
 html, body {
 
+    --yellow-shade: #FFDE64;
+
     --line-height: 32px;
 
     font-size: var(--line-height);
@@ -17,6 +19,12 @@ html, body {
 
     text-size-adjust: none;
 
+}
+
+@media only screen and (max-width: 800px) {
+  html, body {
+    --line-height: 42px;
+  }
 }
 
 
@@ -120,13 +128,23 @@ h1 {
 
 }
 
+#check {
+  position:absolute;
+  left: 1.5rem;
+  top: .5rem;
+
+  transform: rotate(-10deg);
+
+  font-size: var(--line-height);
+
+  z-index: 1;
+
+}
 
 .expandable {
-  background-color: #FFDE64;
+  background-color: var(--yellow-shade);
   padding-left: 4px;
   padding-right: 4px;
-
-  z-index: 0;
 
 }
 
@@ -136,11 +154,8 @@ h1 {
   width: 100%;
   height: 100%;
   flex-grow: 0;
+  transition: transform 0.3s ease;
 
-}
-
-a:has(img) {
-  height: calc(var(--line-height) * 5);
 }
 
 .thumbnail:hover {
@@ -151,6 +166,11 @@ a:has(img) {
   transition: transform 0.3s ease;
   
 }
+
+a:has(img) {
+  height: calc(var(--line-height) * 5);
+}
+
 
 .grid-container {
   margin: var(--line-height);
@@ -165,3 +185,22 @@ a:has(img) {
   padding: 8px;
 }
 
+#postit {
+  text-align: center;
+  background-color: var(--yellow-shade);
+  height: calc(var(--line-height) * 5.9);
+  width:  calc(var(--line-height) * 6);
+
+  right: calc( var(--line-height));
+
+  top: calc(25 * var(--line-height));
+
+  position:absolute;
+
+  transform: skew(6deg) rotate(-5deg);
+
+}
+
+#postit > span {
+  font-size: calc(.75 * var(--line-height));
+}

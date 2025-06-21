@@ -16,16 +16,15 @@ song.addEventListener('mouseenter', () => {
   song.innerHTML = "<i>Demented</i> and <i>Kazoo</i>"
 });
 
-
 age = document.querySelector('#age')
 
 age.addEventListener('mouseenter', () => {
   age.setAttribute("info", "full");
 });
 
-function updateAge() {
 
-  
+
+function updateAge() {
 
   const age = document.querySelector('#age');
 
@@ -50,6 +49,7 @@ function updateAge() {
 
 setInterval(updateAge, 100);
 
+
 images = document.querySelectorAll(".thumbnail, #headshot") 
 
 seed = 0
@@ -62,3 +62,6 @@ for (image of images)  {
 }
 
 
+postit = document.querySelectorAll("#postit") 
+
+element.getBoundingClientRect();
