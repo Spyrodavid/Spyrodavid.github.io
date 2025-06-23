@@ -126,8 +126,8 @@ h1 {
 }
 
 #headshot:hover {
-  filter:hue-rotate(4000deg);
-  transition: filter 100s ease;
+  filter:hue-rotate(400000deg);
+  transition: filter 1000s linear;
 }
 
 #contact {
@@ -190,6 +190,7 @@ a:has(img) {
 
 .grid-container {
   margin: var(--line-height);
+  margin-bottom: calc(var(--line-height ) * 3);
   display: flex;
   gap: var(--line-height);
   flex-wrap: wrap;
