@@ -60,8 +60,3 @@ for (image of images)  {
   seed %= 20
   image.style.transform = `rotate(${seed - 10}deg)`
 }
-
-
-postit = document.querySelectorAll("#postit") 
-
-element.getBoundingClientRect();

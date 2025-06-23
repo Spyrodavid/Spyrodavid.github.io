@@ -3,7 +3,6 @@
 
 <link rel="stylesheet" href="styles.css">
 <script src="main.js" defer></script>
-<link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
 </header>
@@ -17,17 +16,18 @@
         </div>
     </a>
 
-    <a id="check" href="">
+    <!-- <a id="check" href="">
         <div>
             Check out <br>my cool website!
         </div>
-    </a>
+    </a> -->
     
+    <div id="postit-shadow"> </div>
     <div id="postit">
         NOTE TO SELF <br>
 
         <span>
-            <span style="text-decoration: line-through;">Make a Website</span><br>
+            <span style="text-decoration: line-through;">Make a Website</span> <br>
         
          ??? <br>
          Profit
@@ -48,7 +48,7 @@
         </h1>
 
         <p >
-        Welcome to my site. I'm a <span class="expandable" id="age">22</span> year old Programmer from the San Francisco area.
+        Welcome to my portfolio! I'm a <span class="expandable" id="age">22</span> year old Programmer from the San Francisco area.
         </p>
 
         <p>
@@ -64,7 +64,7 @@
 
 
         <p>
-        I recently graduated with a bachelors in Computer Science from <span class="expandable" id="sdsu">SDSU</span>
+        I recently graduated with a bachelors in Computer Science from <span class="expandable" id="sdsu">SDSU</span>,
         but I've been programming since I was 16 years old.
         </p>
 
@@ -77,7 +77,7 @@
             <div class="vertical-bundle">
                 
                 <div class="top-item">
-                    <img class="arrow" src="pics/robo_arrow.png">
+                    <img class="arrow" src="pics/arrows/robo_arrow.png">
                 </div>
                 <div class="bottom-item">
                     <a href="https://www.youtube.com/shorts/L5qQaFN3EVQ?si=swLwG_jZEI2W347P" target="_blank">
@@ -86,6 +86,29 @@
                 </div>
             </div>
 
+            <div class="vertical-bundle" style="flex-direction: column-reverse;">
+                
+                <div class="top-item">
+                    <img class="arrow" src="pics/arrows/art_arrow.png">
+                </div>
+                <div class="bottom-item">
+                    <a href="https://spyrodavid.github.io/lightning/" target="_blank">
+                        <img src="pics/art.png" id="art" class="thumbnail">
+                    </a>
+                </div>
+            </div>
+
+            <div class="vertical-bundle">
+                
+                <div class="top-item">
+                    <img class="arrow" src="pics/arrows/maze_arrow.png">
+                </div>
+                <div class="bottom-item">
+                    <a href="https://youtube.com/shorts/3xc6P1xeN6E?feature=share" target="_blank">
+                    <img src="pics/pololu.png" id="pololu" class="thumbnail">
+                    </a>
+                </div>
+            </div>
 
         </div>
 
@@ -102,30 +125,62 @@
         </p>
 
         <p>
-            During my sophomore year of college I Joined my schools improv comedy team Iota Eta Pie. 
-            As a part of the team I performed more than 30 times and for audiences of more than 100 people. 
+            During my sophomore year of college, I joined my school's improv comedy team Iota Eta Pie. 
+            As a part of the team, I performed more than 30 times and for audiences of more than 100 people. 
             I also took on a leadership role for the team and ran shows as well as team practices.
         </p>
 
         <p>
-            This experinece has given my the opportunity to write and perform in amazing skits, short films, and plays.
+            This experience has given me the opportunity to write and perform in amazing skits, short films, and plays.
         </p>
 
 
         <div class="grid-container">
 
-            
-            <a href="https://vimeo.com/1087031017/75555a047f?share=copy" target="_blank">
+            <div class="vertical-bundle">
+                
+                <div class="top-item">
+                    <img class="arrow" src="pics/arrows/under_arrow.png">
+                </div>
+                <div class="bottom-item">
+                    <a href="https://vimeo.com/1087031017/75555a047f?share=copy" target="_blank">
                 <img src="pics/under.png" id="under" class="thumbnail" >
             </a>
+                </div>
+            </div>
 
-            <a href="https://www.youtube.com/watch?v=ncnV9xYMFzQ" target="_blank">
+            <div class="vertical-bundle">
+                
+                <div class="top-item">
+                    <img class="arrow" src="pics/arrows/improv_arrow.png">
+                </div>
+                <div class="bottom-item">
+                    <a href="https://www.youtube.com/watch?v=ncnV9xYMFzQ" target="_blank">
                 <img src="pics/improv.png" id="improv" class="thumbnail" >
             </a>
+                </div>
+            </div>
 
-            <a href="https://drive.google.com/file/d/1URJNW5fVnMmy6XsAxAniYnbZHVthkk7O/view" target="_blank">
-                <img src="pics/godot.png" id="godot" class="thumbnail" >
-            </a>
+            <div class="vertical-bundle" style="flex-direction: column-reverse;">
+                
+                <div class="top-item">
+                    <div class="bottom-item">
+                        <a href="https://drive.google.com/file/d/1URJNW5fVnMmy6XsAxAniYnbZHVthkk7O/view" target="_blank">
+                    <img src="pics/godot.png" id="godot" class="thumbnail" >
+                    </a>
+                    
+                </div>
+                <img class="arrow" src="pics/arrows/wait_arrow.png">
+            
+                </div>
+            </div>
+
+            
+            
+
+            
+
+            
         </div>
     </div>
 
@@ -139,7 +194,7 @@
         <p>
         The time I spent in college also gave me the opportunity to persue my musical interests in an amazing way.
 
-        During my time in college I was a member of <span id="bands" class="expandable">4 bands</span> where I played trumpet, guitar, and bass guitar.
+        During my time in college I was a member of <span id="bands" class="expandable">4 bands</span> in which I played trumpet, guitar, and bass guitar.
         </p>
 
         <p>
