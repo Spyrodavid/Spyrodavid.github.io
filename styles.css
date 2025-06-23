@@ -90,7 +90,7 @@ h2 {
   line-height: calc(2 * var(--line-height));
 
   margin-bottom: var(--line-height); 
-  margin-top: var(--line-height);
+  margin-top: calc(2 * var(--line-height));
 }
 
 h1 {
@@ -126,8 +126,8 @@ h1 {
 }
 
 #headshot:hover {
-  filter: contrast(400%);
-  transition: filter 20s ease;
+  filter:hue-rotate(4000deg);
+  transition: filter 100s ease;
 }
 
 #contact {
@@ -197,6 +197,10 @@ a:has(img) {
 }
 
 #footer {
+
+  font-size: calc(var(--line-height) * .65);
+  line-height: calc(var(--line-height) * .65);
+  
   background-color: lightgray;
   padding: 8px;
   padding-bottom: calc(var(--line-height) * .5);
