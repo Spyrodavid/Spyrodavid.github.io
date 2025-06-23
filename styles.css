@@ -81,7 +81,7 @@ background-size:
 
 h1, h2 {
 
-  text-align: center;
+  text-align: left;
   
 }
 
@@ -94,6 +94,7 @@ h2 {
 }
 
 h1 {
+  text-align: center;
     font-size: calc(2.5 * var(--line-height));
     line-height: calc(3 * var(--line-height));
 
@@ -201,6 +202,7 @@ a:has(img) {
 
   font-size: calc(var(--line-height) * .65);
   line-height: calc(var(--line-height) * .65);
+  margin-top: calc(var(--line-height) * 2);
   
   background-color: lightgray;
   padding: 8px;
