@@ -1,21 +1,10 @@
-* {
-
-  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-p {
-
-
-  font-weight: lighter;
-}
-
-
 html, body {
+    font-family: Arial, sans-serif;
 
     --yellow-shade: #FFDE64;
+    --blue-shade: #7664ff;
 
-    --line-height: 32px;
+    --line-height: 48px;
 
     font-size: var(--line-height);
     line-height: var(--line-height);
@@ -45,7 +34,7 @@ html, body {
 
   background-color: var(--background);
 
- background-image:
+  background-image:
   radial-gradient(circle at 40px 180px, white 12px, transparent 12px),
   radial-gradient(circle at 41px 181px, gray 12px, transparent 12px),
   linear-gradient(90deg, transparent 79px, #d4acab 79px, #d4acab 81px, transparent 81px),
@@ -77,6 +66,10 @@ background-size:
 
 }
 
+p {
+
+  font-weight: lighter;
+}
 
 
 h1, h2 {
@@ -90,12 +83,12 @@ h2 {
   line-height: calc(2 * var(--line-height));
 
   margin-bottom: var(--line-height); 
-  margin-top: calc(2 * var(--line-height));
+  margin-top: calc(var(--line-height));
 }
 
 h1 {
   text-align: center;
-    font-size: calc(2.5 * var(--line-height));
+    font-size: calc(2 * var(--line-height));
     line-height: calc(3 * var(--line-height));
 
     margin-bottom: var(--line-height); 
@@ -117,21 +110,17 @@ h1 {
 
 
 #headshot {
-  position:absolute;
+  position:relative;
   width: 150px; 
   height: auto;
   right: 1.5rem;
-  top: 3rem;
   border-radius: 1rem / 1rem;
+  filter: saturate(150%);
 
-}
-
-#headshot:hover {
-  filter:hue-rotate(400000deg);
-  transition: filter 1000s linear;
 }
 
 #contact {
+  color: #3051a5;
   position:absolute;
   right: 1.5rem;
   top: 1rem;
@@ -191,25 +180,14 @@ a:has(img) {
 
 .grid-container {
   margin: var(--line-height);
-  margin-bottom: calc(var(--line-height ) * 3);
   display: flex;
   gap: var(--line-height);
   flex-wrap: wrap;
   width: 80vw;
 }
 
-#footer {
-
-  font-size: calc(var(--line-height) * .65);
-  line-height: calc(var(--line-height) * .65);
-  margin-top: calc(var(--line-height) * 2);
-  
-  background-color: lightgray;
-  padding: 8px;
-  padding-bottom: calc(var(--line-height) * .5);
-}
-
 #postit, #postit-shadow {
+  padding-top: calc(var(--line-height) * .5);
   text-align: center;
   background-color: var(--yellow-shade);
   height: calc(var(--line-height) * 5.9);
@@ -259,4 +237,52 @@ a:has(img) {
 .arrow {
   width: 100%;
   z-index: -1;
+}
+
+
+#mark, #mark-shadow {
+
+  color: black;
+  transition: transform 0.3s ease;
+
+
+  font-size: 50%;
+
+  padding-top: calc(var(--line-height) * .5);
+  text-align: center;
+  background-color: var(--blue-shade);
+  height: var(--line-height);
+  top: -20px;
+
+  right: calc( var(--line-height));
+
+
+  position:absolute;
+
+  transform: skew(6deg) rotate(-5deg) ;
+
+  z-index: 1;
+}
+
+#mark {
+  background-image:  linear-gradient(rgba(76, 0, 255, 0.179), transparent 20%, rgba(255, 255, 255, 0.495));
+
+}
+
+#mark-shadow {
+
+  /* transform-origin: top; */
+
+  transform: skew(6deg) rotate(-5deg) skew(-4deg) translateX(-6px) ;
+
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+
+  background-color: rgba(0, 0, 0, 0.671); 
+  filter: blur(2px); 
+}
+
+#mark:hover {
+  transform: translateY(20px) translateX(-10px);
+  
 }
