@@ -60,3 +60,42 @@ for (image of images)  {
   seed %= 20
   image.style.transform = `rotate(${seed - 10}deg)`
 }
+
+
+marks = document.querySelectorAll(".mark") 
+
+for (mark of marks)  {
+
+  mark.addEventListener("click", function() {
+    for (mark of marks) mark.classList.remove("selected_mark");
+
+    this.classList.add("selected_mark");
+  });
+
+  mark.addEventListener("click", function() {
+    swap_content(this.getAttribute('destination'));
+  });
+
+}
+
+
+sections = document.querySelectorAll(".section")
+
+for (section of sections)  {
+  if (section.id != 'introduction') {section.style.display = 'none'}
+}
+
+
+function swap_content(new_section) {
+
+  sections = document.querySelectorAll(".section")
+
+  console.log(sections)
+
+  for (section of sections)  {
+    if (section.id != new_section) {section.style.display = 'none'}
+
+    else section.style.display = 'block'
+  }
+
+}

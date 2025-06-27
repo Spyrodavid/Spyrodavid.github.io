@@ -1,222 +1,261 @@
 <!DOCTYPE html>
-<header>
 
-<link rel="stylesheet" href="styles.css">
-<script src="main.js" defer></script>
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<head>
 
-<title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
-</header>
+    <title>Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+
+</head>
+
 <body>
-    
-    <div id="postit-shadow"> </div>
-    <div id="postit">
-        TO DO: <br>
 
-        <span>
-            <span style="text-decoration: line-through;">Make a Website</span> <br>
-        
-         ??? <br>
-         Profit
-         </span>
+    <div id="mark-area">
 
-    </div>
+        <div class="mark" style="--grad-color: #7664ff;" destination="music">
+            Music
+        </div>
 
-    <div id="mark-shadow"> </div>
-    <a href="#programming">
-        <div id="mark">
+        <div class="mark" style="--grad-color: rgb(255, 70, 70);" destination="acting">
+            Acting
+        </div>
 
+        <div class="mark" style="--grad-color: rgb(255, 88, 213);" destination="programming">
             Programming
         </div>
-    </a>
-   
+
+        <div class="mark selected_mark" style="--grad-color: rgb(48, 255, 48);" destination="introduction">
+            Introduction
+        </div>
+
+    </div>
 
     <div id="body_piece">
 
-    <div class="section">
+        <div class="section" id="introduction">
 
-       
-        
-        <h1>
-            Hi, I'm David
-        </h1>
+            <div class="text">
 
-        <p >
-        Welcome to my portfolio! I'm a <span class="expandable" id="age">22</span> year old Programmer from the San Francisco area.
-        </p>
+                <h1>
+                    Hi, I'm David
+                </h1>
 
-        <p>
-        I am currently seeking a full-time job where I can continue to grow as a software developer.
-        </p>
+                <p>
+                    Welcome to my portfolio! I'm a <span class="expandable" id="age">22</span> year old Programmer from
+                    the San Francisco area.
+                </p>
 
-        <img src="pics/headshot.JPG" id="headshot">
+                <p>
+                    I am currently seeking a full-time job where I can grow as a software developer.
+                </p>
 
-
-    </div>
-
-    <div class="section" id="programming">
-        <h2>
-            Programming
-        </h2>
-
-
-        <p>
-        I recently graduated with a bachelors in Computer Science from <span class="expandable" id="sdsu">SDSU</span>,
-        but I've been programming since I was 16 years old.
-        </p>
-
-        <p>
-            Here's some of the work that I'm most proud of:
-        </p>
-
-        <div class="grid-container">
-
-            <div class="vertical-bundle">
-                
-                <div class="top-item">
-                    <img class="arrow" src="pics/arrows/robo_arrow.png">
-                </div>
-                <div class="bottom-item">
-                    <a href="https://www.youtube.com/shorts/L5qQaFN3EVQ?si=swLwG_jZEI2W347P" target="_blank">
-                        <img src="pics/Robot.png" id="robot" class="thumbnail" >
-                    </a>
-                </div>
             </div>
 
-            <div class="vertical-bundle" style="flex-direction: column-reverse;">
-                
-                <div class="top-item">
-                    <img class="arrow" src="pics/arrows/art_arrow.png">
-                </div>
-                <div class="bottom-item">
-                    <a href="https://spyrodavid.github.io/lightning/" target="_blank">
-                        <img src="pics/art.png" id="art" class="thumbnail">
-                    </a>
-                </div>
+            <img src="pics/headshot.png" id="headshot">
+
+        </div>
+
+
+
+
+        <div class="section" id="programming">
+
+            <div id="postit-shadow"> </div>
+            <div id="postit">
+                TO DO: <br>
+
+                <span>
+                    <span style="text-decoration: line-through;">Make a Website</span> <br>
+
+                    ??? <br>
+                    Profit
+                </span>
+
             </div>
 
-            <div class="vertical-bundle">
-                
-                <div class="top-item">
-                    <img class="arrow" src="pics/arrows/maze_arrow.png">
+            <div class="text">
+
+                <h1>
+                    Programming
+                </h1>
+
+                <p>
+                    I recently graduated with a bachelors in Computer Science from <span class="expandable" id="sdsu">SDSU</span>,
+                    but I've been programming since I was 16 years old.
+                </p>
+
+                <p>
+                    Here's some of the work that I'm most proud of:
+                </p>
+
+                <div class="grid-container">
+
+                    <div class="vertical-bundle">
+
+                        <div>
+                            <img class="arrow" src="pics/arrows/robo_arrow.png">
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/shorts/L5qQaFN3EVQ?si=swLwG_jZEI2W347P" target="_blank">
+                                <img src="pics/Robot.png" id="robot" class="thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="vertical-bundle" style="flex-direction: column-reverse;">
+
+                        <div>
+                            <img class="arrow" src="pics/arrows/art_arrow.png">
+                        </div>
+                        <div>
+                            <a href="https://spyrodavid.github.io/lightning/" target="_blank">
+                                <img src="pics/art.png" id="art" class="thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="vertical-bundle">
+
+                        <div>
+                            <img class="arrow" src="pics/arrows/maze_arrow.png">
+                        </div>
+                        <div>
+                            <a href="https://youtube.com/shorts/3xc6P1xeN6E?feature=share" target="_blank">
+                                <img src="pics/pololu.png" id="pololu" class="thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="bottom-item">
-                    <a href="https://youtube.com/shorts/3xc6P1xeN6E?feature=share" target="_blank">
-                    <img src="pics/pololu.png" id="pololu" class="thumbnail">
-                    </a>
-                </div>
+
             </div>
 
         </div>
 
-    </div>
+        <div class="section" id="acting">
 
-    <div class="section" id="acting">
-        <h2 >
-            Acting
-        </h2>
-
-
-        <p>
-            I've been acting since elementary school but my favorite work came during my time in college.
-        </p>
-
-        <p>
-            During my sophomore year of college, I joined my school's improv comedy team Iota Eta Pie. 
-            As a part of the team, I performed more than 30 times and for audiences of more than 100 people. 
-            I also took on a leadership role for the team and ran shows as well as team practices.
-        </p>
-
-        <p>
-            This experience has given me the opportunity to write and perform in amazing skits, short films, and plays.
-        </p>
+            <div class="text">
+                <h1>
+                    Acting
+                </h1>
 
 
-        <div class="grid-container">
+                <p>
+                    I've been acting since elementary school but my favorite work came during my time in college.
+                </p>
 
-            <div class="vertical-bundle">
-                
-                <div class="top-item">
-                    <img class="arrow" src="pics/arrows/under_arrow.png">
-                </div>
-                <div class="bottom-item">
-                    <a href="https://vimeo.com/1087031017/75555a047f?share=copy" target="_blank">
-                <img src="pics/under.png" id="under" class="thumbnail" >
-            </a>
+                <p>
+                    During my sophomore year of college, I joined my school's improv comedy team Iota Eta Pie.
+                    As a part of the team, I performed more than 30 times and for audiences of more than 100 people.
+                    I also took on a leadership role for the team and ran shows as well as team practices.
+                </p>
+
+                <p>
+                    This experience has given me the opportunity to write and perform in amazing skits, short films, and
+                    plays.
+                </p>
+
+
+                <div class="grid-container">
+
+                    <div class="vertical-bundle">
+
+                        <div>
+                            <img class="arrow" src="pics/arrows/under_arrow.png">
+                        </div>
+                        <div>
+                            <a href="https://vimeo.com/1087031017/75555a047f?share=copy" target="_blank">
+                                <img src="pics/under.png" id="under" class="thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="vertical-bundle">
+
+                        <div>
+                            <img class="arrow" src="pics/arrows/improv_arrow.png">
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/watch?v=ncnV9xYMFzQ" target="_blank">
+                                <img src="pics/improv.png" id="improv" class="thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="vertical-bundle" style="flex-direction: column-reverse;">
+
+                        <div>
+                            <div>
+                                <a href="https://drive.google.com/file/d/1URJNW5fVnMmy6XsAxAniYnbZHVthkk7O/view"
+                                    target="_blank">
+                                    <img src="pics/godot.png" id="godot" class="thumbnail">
+                                </a>
+
+                            </div>
+                            <img class="arrow" src="pics/arrows/wait_arrow.png">
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-
-            <div class="vertical-bundle">
-                
-                <div class="top-item">
-                    <img class="arrow" src="pics/arrows/improv_arrow.png">
-                </div>
-                <div class="bottom-item">
-                    <a href="https://www.youtube.com/watch?v=ncnV9xYMFzQ" target="_blank">
-                <img src="pics/improv.png" id="improv" class="thumbnail" >
-            </a>
-                </div>
-            </div>
-
-            <div class="vertical-bundle" style="flex-direction: column-reverse;">
-                
-                <div class="top-item">
-                    <div class="bottom-item">
-                        <a href="https://drive.google.com/file/d/1URJNW5fVnMmy6XsAxAniYnbZHVthkk7O/view" target="_blank">
-                    <img src="pics/godot.png" id="godot" class="thumbnail" >
-                    </a>
-                    
-                </div>
-                <img class="arrow" src="pics/arrows/wait_arrow.png">
-            
-                </div>
-            </div>
-
-            
         </div>
-    </div>
 
 
-    <div class="section" id="music">
-        <h2>
-           Music
-        </h2>
+        <div class="section" id="music">
+
+            <div class="text">
+                <h1>
+                    Music
+                </h1>
 
 
-        <p>
-        The time I spent in college also gave me the opportunity to persue my musical interests in an amazing way.
+                <p>
+                    The time I spent in college also gave me the opportunity to persue my musical interests in an
+                    amazing way.
 
-        During my time in college I was a member of <span id="bands" class="expandable">4 bands</span> in which I played trumpet, guitar, and bass guitar.
-        </p>
+                    During my time in college I was a member of <span id="bands" class="expandable">4 bands</span> in
+                    which I played trumpet, guitar, and bass guitar.
+                </p>
 
-        <p>
-            I've also helped write <span id="song" class="expandable">two songs</span> for my girlfriend Sierra's band 
-            <a href="https://open.spotify.com/track/6mPzd19qyGLcgbE0qJEkzX" target="_blank">Mewtone</a>.
-            (Unfortunately neither of those songs are recorded as of now)
-        </p>
+                <p>
+                    I've also helped write <span id="song" class="expandable">two songs</span> for my girlfriend
+                    Sierra's band
+                    <a href="https://open.spotify.com/track/6mPzd19qyGLcgbE0qJEkzX" target="_blank">Mewtone</a>.
+                    (Unfortunately neither of those songs are recorded as of now)
+                </p>
 
+            </div>
 
+        </div>
 
-    </div>
+        <div class="section" id="summary">
 
-     <div class="section" id="summary">
-        <h2>
-           Summary
-        </h2>
+            <div class="text">
+                <h1>
+                    Summary
+                </h1>
 
-        I'm passionate about computers, performance, and collaboration. I'm looking for opportunities where I can combine these strengths so If you're working on something exciting, I'd love to hear from you!
-        <br>
-        dsaifer03@gmail.com
-        <br>
-        +1 (925) 212 - 6261
+                I'm passionate about computers, performance, and collaboration. I'm looking for opportunities where I
+                can combine these strengths so If you're working on something exciting, I'd love to hear from you!
+                <br>
+                dsaifer03@gmail.com
+                <br>
+                +1 (925) 212 - 6261
 
+            </div>
 
-
-    </div>
+        </div>
 
     </div>
 
 </body>
-
-

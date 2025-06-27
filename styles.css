@@ -1,68 +1,87 @@
-html, body {
-    font-family: Arial, sans-serif;
 
-    --yellow-shade: #FFDE64;
-    --blue-shade: #7664ff;
 
-    --line-height: 48px;
+html,
+body {
+  background-color: lightgrey;
 
-    font-size: var(--line-height);
-    line-height: var(--line-height);
+  font-family: 'caveat', Arial, sans-serif;
 
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  --yellow-shade: #FFDE64;
 
-    text-size-adjust: none;
+  --line-height: 48px;
+
+  --left-line: 120px;
+
+  font-size: var(--line-height);
+  line-height: var(--line-height);
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  text-size-adjust: none;
 
 }
 
 @media only screen and (max-width: 800px) {
-  html, body {
+
+  html,
+  body {
     --line-height: 42px;
   }
 }
 
+body::-webkit-scrollbar {
+  display: none;
+  /* Hide the scrollbar */
+}
+
 
 #body_piece {
+
+  min-height: 100%;
+
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
 
   --background: #f7f7f7;
 
   background-color: var(--background);
 
   background-image:
-  radial-gradient(circle at 40px 180px, white 12px, transparent 12px),
-  radial-gradient(circle at 41px 181px, gray 12px, transparent 12px),
-  linear-gradient(90deg, transparent 79px, #d4acab 79px, #d4acab 81px, transparent 81px),
-  linear-gradient(to bottom, var(--background), var(--background)), /* background for first row */
-  linear-gradient(#eee .1rem, transparent .1rem);
+    radial-gradient(circle at calc(var(--left-line) / 2) 180px, white 12px, transparent 12px),
+    radial-gradient(circle at calc((var(--left-line) / 2) + 1px) 181px, gray 12px, transparent 12px),
+    linear-gradient(90deg, transparent var(--left-line), #d4acab var(--left-line), #d4acab calc(var(--left-line) + 2px), transparent calc(var(--left-line) + 2px)),
+    linear-gradient(to bottom, var(--background), var(--background)),
+    /* background for first row */
+    linear-gradient(#eee .1rem, transparent .1rem);
 
-background-repeat: 
-  repeat-y,
-  repeat-y,
-  repeat,
-  no-repeat,  
-  repeat;
+  background-repeat:
+    repeat-y,
+    repeat-y,
+    repeat,
+    no-repeat,
+    repeat;
 
-background-size: 
-  100% 50vh,
-  100% 50vh,
-  auto,
-  100% calc(var(--line-height) * 3), 
-  100% var(--line-height);
+  background-size:
+    100% 50vh,
+    100% 50vh,
+    auto,
+    100% calc(var(--line-height) * 3),
+    100% var(--line-height);
 
 
 
-  font-size: var(--line-height) ;
-  line-height: var(--line-height) ;
+  font-size: var(--line-height);
+  line-height: var(--line-height);
   box-sizing: border-box;
 
   margin: 0;
   padding: 0;
+
+  padding-bottom: var(--line-height);
 
 }
 
@@ -72,34 +91,24 @@ p {
 }
 
 
-h1, h2 {
-
-  text-align: left;
-  
-}
-
-h2 {
-  font-size: calc(2 * var(--line-height));
-  line-height: calc(2 * var(--line-height));
-
-  margin-bottom: var(--line-height); 
-  margin-top: calc(var(--line-height));
-}
-
 h1 {
-  text-align: center;
-    font-size: calc(2 * var(--line-height));
-    line-height: calc(3 * var(--line-height));
+  text-wrap: nowrap;
 
-    margin-bottom: var(--line-height); 
-    margin-top: 0;
-    
-    
+  text-align: center;
+  font-size: calc(2 * var(--line-height));
+  line-height: calc(3 * var(--line-height));
+
+  margin-bottom: calc(var(--line-height));
+  margin-top: 0;
+
+  transform: translateY(calc(var(--line-height) * .7));
+
+
 }
 
 
-.section {
-  margin-left: 90px;
+.text {
+  margin-left: calc(var(--left-line) + 10px);
   margin-right: 20%;
   margin-bottom: var(--line-height);
   font-size: var(--line-height);
@@ -110,18 +119,19 @@ h1 {
 
 
 #headshot {
-  position:relative;
-  width: 150px; 
+  position: absolute;
+  top: calc(var(--line-height) * 3);
+  right: calc(var(--line-height) * 1);
+  width: 200px;
   height: auto;
-  right: 1.5rem;
-  border-radius: 1rem / 1rem;
+  /* border-radius: 1rem / 1rem; */
   filter: saturate(150%);
 
 }
 
 #contact {
   color: #3051a5;
-  position:absolute;
+  position: absolute;
   right: 1.5rem;
   top: 1rem;
 
@@ -132,7 +142,7 @@ h1 {
 }
 
 #check {
-  position:absolute;
+  position: absolute;
   left: 1.5rem;
   top: .5rem;
 
@@ -167,14 +177,14 @@ h1 {
 
   transform: scale(1.1) !important;
   transition: transform 0.3s ease;
-  
+
 }
 
 a:has(img) {
   height: calc(var(--line-height) * 5);
 }
 
-.grid-container > span {
+.grid-container>span {
   background-color: red;
 }
 
@@ -187,44 +197,48 @@ a:has(img) {
 }
 
 #postit, #postit-shadow {
-  padding-top: calc(var(--line-height) * .5);
+
+  font-size: 32px;
+  line-height: 32px;
+
+  padding-top: calc(32px * .5);
   text-align: center;
   background-color: var(--yellow-shade);
-  height: calc(var(--line-height) * 5.9);
-  width:  calc(var(--line-height) * 6);
+  height: calc(32px * 5.9);
+  width: calc(32px * 6);
 
-  right: calc( var(--line-height));
+  right: calc(32px);
 
-  top: calc(25 * var(--line-height));
+  top: calc(6 * 32px);
 
-  position:absolute;
+  position: absolute;
 
-  transform: skew(6deg) rotate(-5deg) ;
+  transform: skew(6deg) rotate(-5deg);
 
   z-index: 1;
 }
 
 #postit {
-  background-image:  linear-gradient(rgba(255, 153, 0, 0.179), transparent 20%, rgba(255, 255, 255, 0.495));
+  background-image: linear-gradient(rgba(255, 153, 0, 0.179), transparent 20%, rgba(255, 255, 255, 0.495));
 
 }
 
 #postit-shadow {
 
-  /* transform-origin: top; */
+  transform: skew(6deg) rotate(-5deg) skew(-4deg) translateX(-6px);
 
-  transform: skew(6deg) rotate(-5deg) skew(-4deg) translateX(-6px) ;
+  content: "";
 
-  content: ""; /* Required for pseudo-elements */
   position: absolute;
 
-  background-color: rgba(0, 0, 0, 0.671); 
-  filter: blur(2px); 
+  background-color: rgba(0, 0, 0, 0.671);
+  filter: blur(2px);
 }
 
-#postit > span {
-  font-size: calc(.75 * var(--line-height));
+#postit>span {
+  font-size: calc(.75 * 32px);
 }
+
 
 .vertical-bundle {
   display: flex;
@@ -239,50 +253,83 @@ a:has(img) {
   z-index: -1;
 }
 
+#mark-area {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 5;
+}
 
-#mark, #mark-shadow {
+.mark {
+
+  z-index: auto;
+
+  cursor: pointer;
 
   color: black;
-  transition: transform 0.3s ease;
 
+  --shadow-color: calc(var(--grad-color) - rgba(76, 0, 255, 0.179));
+
+  transition: transform 0.3s ease;
 
   font-size: 50%;
 
   padding-top: calc(var(--line-height) * .5);
   text-align: center;
-  background-color: var(--blue-shade);
+  background-color: var(--grad-color);
   height: var(--line-height);
+
+  width: calc(var(--line-height) * 3.5);
   top: -20px;
 
-  right: calc( var(--line-height));
+  margin-right: 20px;
 
 
-  position:absolute;
+  transform: translateY(calc(var(--line-height) * -.5)) skew(8deg) rotate(-5deg);
 
-  transform: skew(6deg) rotate(-5deg) ;
 
-  z-index: 1;
+  background-image: linear-gradient(rgba(76, 0, 255, 0.179), transparent 20%, rgba(255, 255, 255, 0.495));
+
+  transform-style: preserve-3d;
+
+
 }
 
-#mark {
-  background-image:  linear-gradient(rgba(76, 0, 255, 0.179), transparent 20%, rgba(255, 255, 255, 0.495));
+.mark:hover {
+  transform: translateY(calc(var(--line-height) * -.5)) translateY(20px) translateX(-10px) scale(1.05);
 
 }
 
-#mark-shadow {
+.mark::before {
 
-  /* transform-origin: top; */
+  transition: transform 0.3s ease, left 0.3s ease;
 
-  transform: skew(6deg) rotate(-5deg) skew(-4deg) translateX(-6px) ;
+  transform-origin: top right;
 
-  content: ""; /* Required for pseudo-elements */
-  position: absolute;
+  transform: translateZ(-1px) rotate(2deg);
 
+  content: "";
+  position: absolute; 
+  top: 4px; 
+  left: -3px; 
+  width: 100%; 
+  height: 100%; 
   background-color: rgba(0, 0, 0, 0.671); 
-  filter: blur(2px); 
+  filter: blur(2px);
+
 }
 
-#mark:hover {
-  transform: translateY(20px) translateX(-10px);
-  
+.mark:hover::before{
+
+  transform: translateZ(-1px);
+
+  left: 0px;
+
+}
+
+
+
+.selected_mark {
+  transform: translateY(-120px);
 }
