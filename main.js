@@ -50,7 +50,7 @@ function updateAge() {
 setInterval(updateAge, 100);
 
 
-images = document.querySelectorAll(".thumbnail, #headshot") 
+images = document.querySelectorAll(".thumbnail") 
 
 seed = 0
 
