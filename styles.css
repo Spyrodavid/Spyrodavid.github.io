@@ -30,6 +30,10 @@ body::-webkit-scrollbar {
   /* Hide the scrollbar */
 }
 
+@media only screen and (max-width: 800px) {
+  
+}
+
 
 #body_piece {
 
@@ -37,7 +41,7 @@ body::-webkit-scrollbar {
 
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 
-  border-radius: 3px 60px 0 0;
+  border-radius: 60px 60px 0 0;
 
   --background: #f7f7f7;
 
@@ -59,8 +63,8 @@ body::-webkit-scrollbar {
     repeat;
 
   background-size:
-    100% 50vh,
-    100% 50vh,
+    100% 400px,
+    100% 400px,
     auto,
     100% calc(var(--line-height) * 3),
     100% var(--line-height);
@@ -102,7 +106,7 @@ h1 {
 
 .text {
   margin-left: calc(var(--left-line) + 10px);
-  margin-right: 20%;
+  margin-right: 15%;
   margin-bottom: var(--line-height);
   font-size: var(--line-height);
   line-height: var(--line-height);
@@ -110,12 +114,21 @@ h1 {
 
 }
 
+#introduction > .text {
+  margin-right: 25%;
+}
+
+#programming > .text {
+  margin-right: 25%;
+}
+
+
 
 #headshot {
   position: absolute;
   top: calc(var(--line-height) * 3);
-  right: calc(var(--line-height) * 1);
-  width: 200px;
+  right: calc(var(--line-height) * .8);
+  width: 20%;
   height: auto;
   /* border-radius: 1rem / 1rem; */
   filter: saturate(150%);
@@ -252,7 +265,11 @@ a:has(img) {
   z-index: 5;
   justify-content: space-between;
   padding-left: 10%;
-  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+
+  box-sizing: border-box;
+
 }
 
 .mark {
@@ -290,6 +307,10 @@ a:has(img) {
 
 }
 
+.selected_mark {
+  transform: translateY(-120px) !important;
+}
+
 .mark:hover {
   transform: translateY(calc(var(--line-height) * -.5)) translateY(20px) translateX(-10px) scale(1.05);
   z-index: 3;
@@ -324,6 +345,3 @@ a:has(img) {
 
 }
 
-.selected_mark {
-  transform: translateY(-120px);
-}
