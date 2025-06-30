@@ -252,7 +252,7 @@ a:has(img) {
   flex-direction: column;
 
   width: max(20vw);
-  height: calc(8 * var(--line-height));
+  height: calc(6 * var(--line-height));
 }
 
 .arrow {
