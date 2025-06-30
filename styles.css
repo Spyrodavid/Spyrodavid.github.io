@@ -8,7 +8,7 @@ body {
 
   --yellow-shade: #FFDE64;
 
-  --line-height: 54px;
+  --line-height: 48px;
 
   --left-line: 120px;
 
@@ -208,8 +208,9 @@ a:has(img) {
   padding-top: calc(32px * .5);
   text-align: center;
   background-color: var(--yellow-shade);
-  height: calc(32px * 5.9);
-  width: calc(32px * 6);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  width: 17%;
 
   right: calc(32px);
 
