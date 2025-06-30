@@ -1,25 +1,29 @@
 sdsu = document.querySelector('#sdsu')
 
-sdsu.addEventListener('mouseenter', () => {
+sdsu.addEventListener('click', () => {
   sdsu.innerHTML = "San Diego State University"
+  sdsu.classList.add("expanded")
 });
 
 bands = document.querySelector('#bands')
 
-bands.addEventListener('mouseenter', () => {
+bands.addEventListener('click', () => {
   bands.innerHTML = "<i>The Chardoors</i>, <i>The Half Wits</i>, <i>Lime Devil</i>, and <i>The Hot Socks</i>"
+  sdsu.classList.add("expanded")
 });
 
 song = document.querySelector('#song')
 
-song.addEventListener('mouseenter', () => {
+song.addEventListener('click', () => {
   song.innerHTML = "<i>Demented</i> and <i>Kazoo</i>"
+  sdsu.classList.add("expanded")
 });
 
 age = document.querySelector('#age')
 
-age.addEventListener('mouseenter', () => {
+age.addEventListener('click', () => {
   age.setAttribute("info", "full");
+  sdsu.classList.add("expanded")
 });
 
 
