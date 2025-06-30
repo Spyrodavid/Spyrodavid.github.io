@@ -8,7 +8,7 @@ body {
 
   --yellow-shade: #FFDE64;
 
-  --line-height: 48px;
+  --line-height: 54px;
 
   --left-line: 120px;
 
@@ -30,9 +30,7 @@ body::-webkit-scrollbar {
   /* Hide the scrollbar */
 }
 
-@media only screen and (max-width: 800px) {
-  
-}
+
 
 
 #body_piece {
@@ -66,7 +64,7 @@ body::-webkit-scrollbar {
     100% 400px,
     100% 400px,
     auto,
-    100% calc(var(--line-height) * 3),
+    100% calc(var(--line-height) * 4),
     100% var(--line-height);
 
 
@@ -95,7 +93,8 @@ h1 {
   font-size: calc(2 * var(--line-height));
   line-height: calc(3 * var(--line-height));
 
-  margin-bottom: calc(var(--line-height));
+  margin-bottom: calc(var(--line-height) );
+  padding-top: calc(var(--line-height) );
   margin-top: 0;
 
   transform: translateY(calc(var(--line-height) * .7));
@@ -263,12 +262,13 @@ a:has(img) {
   display: flex;
   flex-direction: row-reverse;
   z-index: 5;
-  justify-content: space-between;
-  padding-left: 10%;
-  padding-right: 10%;
+  justify-content: center;
   width: 100%;
 
   box-sizing: border-box;
+
+  padding-right: 5%;
+  padding-left: 5%;
 
 }
 
@@ -304,8 +304,10 @@ a:has(img) {
 
   transform-style: preserve-3d;
 
-
 }
+
+
+
 
 .selected_mark {
   transform: translateY(-120px) !important;
