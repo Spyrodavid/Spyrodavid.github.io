@@ -205,12 +205,14 @@ a:has(img) {
   font-size: 32px;
   line-height: 32px;
 
-  padding-top: calc(32px * .5);
+  padding-top: calc(32px * 1);
   text-align: center;
   background-color: var(--yellow-shade);
   height: auto;
   aspect-ratio: 1 / 1;
   width: 17%;
+
+  box-sizing: border-box;
 
   right: calc(32px);
 
